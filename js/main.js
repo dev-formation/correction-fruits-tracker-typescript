@@ -29,19 +29,6 @@ const MSG_FAIL = document.querySelector('#fail');
 
 const listVeg = ['🍏 Pomme verte', '🍎 Pomme rouge', '🍐 Poire', '🍊 Orange', '🍋 Citron', '🍌 Banane', '🍉 Pastèque', '🍓 Fraise', '🍆 Aubergine', '🍅 Tomate', '🥑 Avocat', '🥦 Brocoli', '🥒 Cocombre', '🫑 Poivron', '🥕 Carotte'];
 
-BTN_ADD.addEventListener('click', function () {
-    const vege = getRandomElement(listVeg);
-    LIST.innerHTML += (`<li class="list-group-item">${vege}</li>`);
-    check();
-})
-
-BTN_REMOVE.addEventListener('click', function () {
-    if(LIST.lastChild) {
-        LIST.removeChild(LIST.lastChild);
-    }
-    check();
-})
-
 function getRandomElement(list) {
     const randomIndex = Math.floor((Math.random() * list.length));
     console.log(randomIndex);
@@ -57,3 +44,16 @@ function check() {
         MSG_FAIL.classList.remove('invisible');
     }
 }
+
+BTN_ADD.addEventListener('click', function () {
+    const vege = getRandomElement(listVeg);
+    LIST.innerHTML += (`<li class="list-group-item">${vege}</li>`);
+    check();
+})
+
+BTN_REMOVE.addEventListener('click', function () {
+    if(LIST.lastChild) {
+        LIST.removeChild(LIST.lastChild);
+    }
+    check();
+})
