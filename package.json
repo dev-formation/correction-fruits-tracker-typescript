@@ -1,0 +1,24 @@
+{
+  "name": "fruits-tracker-typescript",
+  "version": "1.0.0",
+  "description": "L'exercice suivant te permettra de faire quelques recherches sur le fonctionnement des tableaux. Pour t'aider tu peux directement aller sur la [doc officiel](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dev-formation/fruits-tracker-typescript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dev-formation/fruits-tracker-typescript/issues"
+  },
+  "homepage": "https://github.com/dev-formation/fruits-tracker-typescript#readme",
+  "devDependencies": {
+    "parcel": "^2.7.0"
+  }
+}
