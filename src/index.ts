@@ -3,9 +3,43 @@
  *
  */
 
-function getRandomElement(list: string[]): string {}
+function getRandomElement(list: string[]): string {
+  // const random = Math.floor(Math.random() * 6); // génère un nombre aléatoire entre 0 et 5
 
-function track(listVegeFruit: NodeList): boolean {}
+  // list[0]
+
+  // let index = 0;
+  // list[index];
+
+  // list.length
+
+  /**
+   * 1 - Calculer un nombre aléatoire entre 0 et longueur de mon tableau - 1
+   * 2 - Récupérer un élément de mon tableau à l'aide de mon index aléatoire
+   * 3 - Retourner l'élément
+   */
+
+  console.log(list);
+
+  const random: number = Math.floor(Math.random() * list.length);
+  console.log('random : ', random);
+
+  const fruitRandom: string = list[random];
+  console.log('fruitRandom : ', fruitRandom);
+
+  return fruitRandom;
+}
+
+function track(listVegeFruit: NodeList): boolean {
+  console.log(listVegeFruit);
+  console.log(listVegeFruit.length);
+
+  if (listVegeFruit.length >= 5) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 /******************************************************
  * LE CODE CI-DESSOUS FAIT FONCTIONNER LA PAGE TU PEUX
@@ -16,6 +50,12 @@ function track(listVegeFruit: NodeList): boolean {}
 
 const BTN_ADD =
   document.querySelector('#add') && document.querySelector('#add');
+
+// let BTN_ADD;
+// if (document.querySelector('#add')) {
+//   BTN_ADD = document.querySelector('#add');
+// }
+
 const BTN_REMOVE = document.querySelector('#remove');
 const LIST = document.querySelector('#fruitList');
 const MSG_SUCCESS = document.querySelector('#success');
